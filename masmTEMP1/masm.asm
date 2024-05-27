@@ -33,10 +33,9 @@ main PROC
       call WriteString
    call ReadChar
       call Crlf
-   mov ah, al          ; Store user input
-      cmp ah, 'a'     ; Check if lowercase
-   jl Next1            ; If not lowercase, continue
-      sub ah, 32      ; Convert lowercase to uppercase
+   mov ah, al               cmp ah, 'a'     
+   jl Next1           
+      sub ah, 32      
 Next1:
       cmp ah, correct1
    je CorrectAnswer1
