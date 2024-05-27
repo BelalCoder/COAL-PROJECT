@@ -33,7 +33,8 @@ main PROC
       call WriteString
    call ReadChar
       call Crlf
-   mov ah, al               cmp ah, 'a'     
+ cmp ah, 'a' 
+mov ah, al                  
    jl Next1           
       sub ah, 32      
 Next1:
@@ -46,14 +47,14 @@ CorrectAnswer1:
    mov edx, OFFSET msgCorrect
       call WriteString
    call Crlf
-      jmp NextQuestion1
+      jmp Question2
 
 IncorrectAnswer1:
    mov edx, OFFSET msgIncorrect
       call WriteString
    call Crlf
 
-NextQuestion1:
+Question2:
 
    mov edx, OFFSET question2
       call WriteString
@@ -73,14 +74,14 @@ CorrectAnswer2:
    mov edx, OFFSET msgCorrect
       call WriteString
    call Crlf
-      jmp NextQuestion2
+      jmp Question3
 
 IncorrectAnswer2:
    mov edx, OFFSET msgIncorrect
       call WriteString
    call Crlf
 
-NextQuestion2:
+Question3:
 
    mov edx, OFFSET question3
       call WriteString
@@ -100,14 +101,14 @@ CorrectAnswer3:
    mov edx, OFFSET msgCorrect
       call WriteString
    call Crlf
-      jmp NextQuestion3
+      jmp Question4
 
 IncorrectAnswer3:
    mov edx, OFFSET msgIncorrect
       call WriteString
    call Crlf
 
-NextQuestion3:
+Question4:
 
    mov edx, OFFSET question4
       call WriteString
@@ -127,14 +128,14 @@ CorrectAnswer4:
    mov edx, OFFSET msgCorrect
       call WriteString
    call Crlf
-      jmp NextQuestion4
+      jmp Question5
 
 IncorrectAnswer4:
    mov edx, OFFSET msgIncorrect
       call WriteString
    call Crlf
 
-NextQuestion4:
+Question5:
 
    mov edx, OFFSET question5
       call WriteString
